@@ -18,6 +18,63 @@ public:
         direction = initialDirection;
         originaldirection = og;
     }
+    void moveForward()
+    {
+        //Changing position according to spacecraft moving and facing
+        if (direction == 'N')
+        {
+            y++;
+        }
+        else if (direction == 'S')
+        {
+            y--;
+        }
+        else if (direction == 'E')
+        {
+            x++;
+        }
+        else if (direction == 'W')
+        {
+            x--;
+        }
+        else if (direction == 'U')
+        {
+            z++;
+        }
+        else if (direction == 'D')
+        {
+            z--;
+        }
+    }
+
+    void moveBackward()
+    {
+        if (direction == 'N')
+        {
+            y--;
+        }
+        else if (direction == 'S')
+        {
+            y++;
+        }
+        else if (direction == 'E')
+        {
+            x--;
+        }
+        else if (direction == 'W')
+        {
+            x++;
+        }
+        else if (direction == 'U')
+        {
+            z--;
+        }
+        else if (direction == 'D')
+        {
+            z++;
+        }
+    }
+
 };
 
 int main()
@@ -39,11 +96,11 @@ int main()
         char command = commands[i];
         if (command == 'f')
         {
-            
+            spacecraft.moveForward();
         }
         else if (command == 'b')
         {
-            
+         spacecraft.moveBackward();   
         }
         else if (command == 'l')
         {
