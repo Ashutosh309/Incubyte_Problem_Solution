@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Here we have consider X- axis as East-West,  Y-axis as North-South and Z-axis as Up-Down
+
 class Spacecraft
 {
 private:
